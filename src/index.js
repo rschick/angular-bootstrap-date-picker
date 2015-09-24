@@ -1,12 +1,13 @@
-module.exports = angular.module('angular-bootstrap-date-picker', []).
-directive('ngBootstrapDatePicker', function() {
+angular.module('angular-bootstrap-date-picker', [])
+
+.directive('ngBootstrapDatePicker', function() {
 	return {
 		restrict: 'E',
-		template: '<span class="input-group date">
-			<span class="input-group-addon">
-				<i class="glyphicon glyphicon-calendar"></i>
-			</span>
-			<input type="text" class="form-control" ng-model="dateString" />
+		template: '<span class="input-group date"> \
+			<span class="input-group-addon"> \
+				<i class="glyphicon glyphicon-calendar"></i> \
+			</span> \
+			<input type="text" class="form-control" ng-model="dateString" /> \
 		</span>',
 		require: '?ngModel',
 		replace: true,
